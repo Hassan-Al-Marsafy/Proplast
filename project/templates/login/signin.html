@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+  <title>Login/Register Page</title>
+
+</head>
+<body>
+  <div class="container">
+    <form method="post" class="form">
+      {% csrf_token %}
+      <h1> Login/Register</h1>
+      <input type="text" placeholder="Username" name="username">
+      <input type="password" placeholder="Password" name="password">
+      <button>Login</button>
+      <p>Don't have an account? <a href="reg/" style="color: rgb(34, 0, 255);">Register</a></p>
+    </form>
+  </div>
+</body>
+</html>

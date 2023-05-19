@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Page</title>
+    {% load static %}
+   <link rel = "stylesheet" href = "{% static 'css/industcommercial.css' %}">
+   <link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+</head>
+<body>
+	<h1>Industrial Products</h1>
+	<div class="container">
+		<a href="ipro1/"> 
+		<div class="product">
+			<img src="{% static 'image/PRODUCT 1 IND.jpeg' %}" alt="Product 1">
+			<h2>Ice cream sticks</h2>
+			<p>For spiral Ice cream <br> (look like wood tick)</p>
+			<div class="product-colors">
+				<label for="product1-color">Choose a color:</label>
+				<span class="color" style="background-color: #ff0000;"></span>
+        <span class="color" style="background-color: #00ff00;"></span>
+        <span class="color" style="background-color: #0000ff;"></span>
+        <span class="color" style="background-color: #ffff00;"></span>
+			</div>
+		</div>
+	</a>
+		<a href="ipro2/"> 
+		<div class="product">
+			<img src="{% static 'image/PRODUCT 2 IND.jpeg' %}" alt="Product 2">
+			<h2>Lollipops sticks </h2>
+			<p><br>Can change the length</p>
+			<div class="product-colors">
+				<label for="product2-color">Choose a color:</label>
+				<span class="color" style="background-color: #ff0000;"></span>
+        <span class="color" style="background-color: #00ff00;"></span>
+        <span class="color" style="background-color: #0000ff;"></span>
+        <span class="color" style="background-color: #ffff00;"></span>
+			</div>
+		</div>
+	</a>
+		<a href="ipro3/"> 
+    <div class="product">
+			<img src="{% static 'image/PRODUCT 3 IND.jpeg' %}" alt="Product 3">
+			<h2>Drinking straws for juice</h2>
+			<p><br>Can make any length and diameter</p>
+			<div class="product-colors">
+				<label for="product3-color">Choose a color:</label>
+				<span class="color" style="background-color: #ff0000;"></span>
+        <span class="color" style="background-color: #00ff00;"></span>
+        <span class="color" style="background-color: #0000ff;"></span>
+        <span class="color" style="background-color: #ffff00;"></span>
+			</div>
+		</div>
+	</a>
+		<a href="ipro4/"> 
+    <div class="product">
+			<img src="{% static 'image/PRODUCT 4 IND.jpeg' %}" alt="Product 4">
+			<h2>Cotton buds sticks</h2>
+			<p><br>Suitable for Cotton buds factories</p>
+			<div class="product-colors">
+				<label for="product4-color">Choose a color:</label>
+				<span class="color" style="background-color: #ff0000;"></span>
+        <span class="color" style="background-color: #00ff00;"></span>
+        <span class="color" style="background-color: #0000ff;"></span>
+        <span class="color" style="background-color: #ffff00;"></span>
+			</div>
+		</div>
+	</a>
+		
+</div>
+</div>
+<div class="toolbar">
+    <div class="leftpart">
+      <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+    </div>
+    <div class="rightpart">
+      <a class="link" href="{% url 'index' %}">
+        <button class="buttons">home</button>
+      </a>
+      <a href="{% url 'choosetype' %}">
+      <button class="buttons">products</button>
+    </a>
+      <a class="link" href="{% url 'contact' %}">
+      <button class="buttons">contact us</button>
+      </a>
+      <a href="{% url 'login' %}">
+        <button class="buttons" >login/register</button>
+      </a>
+      <a href="{% url 'profile' %}">
+        <button class="buttons" >profile</button>
+      </a>
+      <div class="cartcontainer">
+        <div class="incart">0</div>
+        <a href="{% url 'cart' %}">
+          <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+        </a>
+      </div>
+</body>
+</html>  

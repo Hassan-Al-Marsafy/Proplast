@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Profile</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+  <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Customer Profile</h1>
+    </header>
+    <main>
+      <section class="profile">
+        
+        <div class="profile-info">
+          <h2> Name: Fadlya</h2>
+          <p> <strong> Email:</strong> fadlya@fadlya.com</p>
+          <p> <strong> Phone</strong> +20109094563</p>
+        </div>
+      </section>
+      <section class="orders">
+        <h2>Orders :</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID &nbsp;</th>
+              <th>Date</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>2023-03-20 &nbsp;</td>
+              <td>$100.00 </td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>2023-03-22 &nbsp;</td>
+              <td>$75.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 shalemoooooo Company. All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+</div>
+<div class="toolbar">
+  <div class="leftpart">
+    <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+  </div>
+  <div class="rightpart">
+    <a class="link" href="{% url 'index' %}">
+      <button class="buttons">home</button>
+    </a>
+    <a href="{% url 'choosetype' %}">
+    <button class="buttons">products</button>
+  </a>
+    <a class="link" href="{% url 'contact' %}">
+    <button class="buttons">contact us</button>
+    </a>
+    <a href="{% url 'login' %}">
+      <button class="buttons" >login/register</button>
+    </a>
+    <a href="{% url 'profile' %}">
+      <button class="buttons" >profile</button>
+    </a>
+    <div class="cartcontainer">
+      <div class="incart">0</div>
+      <a href="{% url 'cart' %}">
+        <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+      </a>
+    </div>
+</body>
+</html>

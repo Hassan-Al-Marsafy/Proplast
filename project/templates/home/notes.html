@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>My Notes On HTML</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+</head>
+<body>
+  
+</div>
+<div class="toolbar">
+  <div class="leftpart">
+    <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+  </div>
+  <div class="rightpart">
+    <a class="link" href="{% url 'index' %}">
+      <button class="buttons">home</button>
+    </a>
+    <a href="{% url 'choosetype' %}">
+    <button class="buttons">products</button>
+  </a>
+    <a class="link" href="{% url 'contact' %}">
+    <button class="buttons">contact us</button>
+    </a>
+    <a href="{% url 'login' %}">
+      <button class="buttons" >login/register</button>
+    </a>
+    <a href="{% url 'profile' %}">
+      <button class="buttons" >profile</button>
+    </a>
+    <div class="cartcontainer">
+      <div class="incart">0</div>
+      <a href="{% url 'cart' %}">
+        <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+      </a>
+    </div>
+
+    </div>
+    
+  </div>
+  <div class="images">   
+<!-- Image slider start -->
+<div class="slider">
+  <div class="slides">
+      <!-- Radio buttons start -->
+      <input type="radio" name="radiobtn" id="radio1">
+      <input type="radio" name="radiobtn" id="radio2">
+      <input type="radio" name="radiobtn" id="radio3">
+      <input type="radio" name="radiobtn" id="radio4">
+      <!-- Radio buttons end -->
+      <!-- Slide images start -->
+      <div class="slide first">
+          <img src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}" alt="">
+      </div>
+      <div class="slide">
+          <img src="{% static 'image/WhatsApp Image 2023-03-19 at 2.40.28 AM (1).jpeg' %}" alt="">
+      </div>
+      <div class="slide">
+          <img src="{% static 'image/WhatsApp Image 2023-03-19 at 2.39.11 AM.jpeg' %}" alt="">
+      </div>
+      <div class="slide">
+          <img src="{% static 'image/WhatsApp Image 2023-03-19 at 2.40.28 AM (4).jpeg' %}" alt="">
+      </div>
+      <!-- Slide images end -->
+      <!-- Autonavigation start -->
+      <div class="naviagtion_auto">
+          <div class="autobtn1"></div>
+          <div class="autobtn2"></div>
+          <div class="autobtn3"></div>
+          <div class="autobtn4"></div>
+      </div>
+      <!-- Autonavigation end -->
+  </div>
+  <!-- Manual navigation start -->
+  <div class="navigation_manual">
+      <label for="radio1" class="manual_button"></label>
+      <label for="radio2" class="manual_button"></label>
+      <label for="radio3" class="manual_button"></label>
+      <label for="radio4" class="manual_button"></label>
+  </div>
+  <!-- Manual navigation start -->
+</div>
+<!-- Image slider end -->
+  </div>
+  <script type="text/javascript">
+    let counter = 2;
+    setInterval(function(){
+        let element = document.getElementById('radio' + counter);
+        element.checked = true;
+        counter++;
+        if(counter > 4){
+            counter = 1;
+        }
+    }, 3000);
+</script>
+  <div>
+      <img class="side" src="{% static 'image/WhatsApp Image 2023-03-19 at 2.39.12 AM (1).jpeg' %}">
+  </div>
+  <div class="main">
+    <div class="notes">
+      <br>Pro Plast company was established in Egypt 1995. The company has been working with the local market requirements and developing products according to the market needs, putting in mind customer satisfaction as a top priority.
+      Our company also exports to major countries in Europe ,Saudi Arabia, Kuwait, Sudan, Syria ,and Lybia. We produce all kinds of straws for commercial or industrial uses. Commercial products includes straws with flexible , artistic, loose, wide, long, or short range with different sizes and colours.
+      Industrial products include straws and sticks for juice factories ,cotton buds factories, ice cream factories, and lollipops factories.
+    </div>
+    <div class="mainpart">
+      <div class="title">
+        <br>Our mission is to help people find the best suitable products for their disposable needs.
+      </div>
+      <div class="aims">
+       <br>Our goal is to develop new products to meet customer needs and to provide  better services for existing ones . Also, plans are made to increase the exports for more countries .
+      </div>
+    </div>
+
+  </div>
+
+  <img class="thumbsupman" src="{% static 'image/thumbsup.jpg' %}">
+    <div class="info">
+      <p></p>
+    </div>
+ 
+ 
+</body>
+</html>

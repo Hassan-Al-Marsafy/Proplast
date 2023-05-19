@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reg.css' %}">
+  <title>Registration Form</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <form action = "" class="form" method = "post">
+        {% csrf_token %}
+        <h1>Registration</h1>
+        <form>
+            <div>
+                <input type="text" placeholder="username" name="username">
+
+            </div>
+
+            <div>
+                <input type="Email" placeholder="email" name = "email">
+            </div>
+
+            <div>
+                <input type="password" placeholder="password" name="password">
+            </div>
+
+            <div>
+                <input type="tel" placeholder="phone number" name="phone">
+            </div>
+
+            
+           
+                <input type="submit" value="submit">
+           
+            
+        </form>
+
+
+    </form>
+  </div>
+</body>
+</html>

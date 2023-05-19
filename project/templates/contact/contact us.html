@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+	<form class="container" action = "" method = "post">
+    {% csrf_token %}
+		<h1>Contact Us</h1>
+		
+			<label class="label" type="text" placeholder="name">
+                <br> Name: <br>
+
+            </label>
+			<input class="nam-e" type="text" name="name" required>
+			<label><br>Email:<br></label>
+			<input class="e-mail" type="email" name="email" required>
+            
+			<label><br>Message:<br></label>
+			<textarea class="messag-e" name="message" required></textarea>
+			<input class="send-but" type="submit" value="Send">
+			
+			<p class="tro-con">
+				<strong>	If  you have trouble contacting us please send to us directly on this email:fadlyafadlya@gmail.com</strong>
+			</p>
+    </form>	
+
+    <div class="toolbar">
+      <div class="leftpart">
+        <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+      </div>
+      <div class="rightpart">
+        <a class="link" href="{% url 'index' %}">
+          <button class="buttons">home</button>
+        </a>
+        <a href="{% url 'choosetype' %}">
+          <button class="buttons">products</button>
+        </a>
+        <a class="link" href="{% url 'contact' %}">
+        <button class="buttons">contact us</button>
+        </a>
+        <a href="{% url 'login' %}">
+          <button class="buttons" >login/register</button>
+        </a>
+        <a href="{% url 'profile' %}">
+          <button class="buttons" >profile</button>
+        </a>
+        <div class="cartcontainer">
+          <div class="incart">0</div>
+          <a href="{% url 'cart' %}">
+            <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+          </a>
+        </div>
+      </div>
+		</div>
+	
+</body>
+</html>

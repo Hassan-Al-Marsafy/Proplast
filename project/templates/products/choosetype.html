@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Page</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/choosetype.css' %}">
+<link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+</head>
+<body>
+	<h1>Our Products</h1>
+  <a href = "commercial/">
+	<div class="container">
+		<div class="product">
+      <img src="{% static 'image/Product 4.jpeg' %}" alt="Product 1">
+    
+      <h1>Commercial Products</h1>
+		</div>
+  </a>
+    <a href="industrial/">
+		  <div class="product">
+       <img src="{% static 'image/Product 4.jpeg' %}" alt="Product 2">
+        <h1>Industrial Products</h1>
+		  </div>
+    </a>
+  </div>  
+</div>
+</div>
+<div class="toolbar">
+  <div class="leftpart">
+    <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+  </div>
+  <div class="rightpart">
+    <a class="link" href="{% url 'index' %}">
+      <button class="buttons">home</button>
+    </a>
+    <a href="{% url 'choosetype' %}">
+    <button class="buttons">products</button>
+  </a>
+    <a class="link" href="{% url 'contact' %}">
+    <button class="buttons">contact us</button>
+    </a>
+    <a href="{% url 'login' %}">
+      <button class="buttons" >login/register</button>
+    </a>
+    <a href="{% url 'profile' %}">
+      <button class="buttons" >profile</button>
+    </a>
+    <div class="cartcontainer">
+      <div class="incart">0</div>
+      <a href="{% url 'cart' %}">
+        <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+      </a>
+    </div>
+</body>
+</html> 

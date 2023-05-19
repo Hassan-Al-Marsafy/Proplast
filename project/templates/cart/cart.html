@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>   
+<title>cart</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}">
+<link rel="stylesheet" href="{% static 'css/toolbar.css' %}">
+</head>
+
+<body>    
+    <script type="text/javascript" src="cart.js"></script>
+    
+    <div class="container">
+        <header>
+        <div class="heading"><h1>Your Shopping Cart</h1></div>
+        <div class="shopping">
+          <img src="image/bag.png">
+          <span class="quantity">0</span>
+        </div>
+        </header>
+      
+    </div>
+   
+      <div class="list">
+
+    </div>
+
+
+
+
+
+    <div class="product">
+
+
+    <div class="prod-1">
+        <img src="{% static 'image/Product 1.jpeg' %}" width="50%"style="margin-top: 10%;">
+        <p>Product Name 1 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;">Add To Card</button>
+        
+    </div>
+    <div class="prod-2">
+
+        <img src="{% static 'image/Product 2.jpeg' %}" width="50%"style="margin-top: 10%;">
+        <p>Product Name 2 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;">Add To Card</button>
+    </div>
+
+    <div class="prod-3">
+
+        <img src="{% static 'image/Product 3.jpeg' %}" width="50%"style="margin-top: 10%;">
+        <p>Product Name 3 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;">Add To Card</button>
+    </div>
+
+    <div class="prod-4">
+        <img src="{% static 'image/Product 4.jpeg' %}" width="50%"style="margin-top: 10%;">
+        <p>Product Name 4 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;">Add To Card</button>
+    </div>
+    <div class="prod-5">
+        <img src="{% static 'image/Product 5.jpeg' %}" width="50%" style="margin-top: 10%;">
+        <p>Product Name 5 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;">Add To Card</button>
+    </div>
+
+    <div class="prod-6">
+        <img src="{% static 'image/PRODUCT 2 IND.jpeg' %}" width="50%"style="margin-top: 10%;">
+        <p>Product Name 6 <br>
+        250,00 L.E</p>
+        <button style="background-color: black; color: aliceblue;" >Add To Card</button></div>
+
+    </div>
+
+
+    <div class="card">
+        <h1 >card</h1>
+        <u1 class="listCard"></u1>
+        <div class="empty"><pr> Cart is empty!</pr></div>
+        <div class="checkOut">
+            
+            <div class="total">Total: 0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="toolbar">
+    <div class="leftpart">
+      <img class="logo" src="{% static 'image/WhatsApp Image 2023-03-24 at 12.15.08 AM.jpeg' %}">
+    </div>
+    <div class="rightpart">
+      <a class="link" href="{% url 'index' %}">
+        <button class="buttons">home</button>
+      </a>
+      <a href="{% url 'choosetype' %}">
+      <button class="buttons">products</button>
+    </a>
+      <a class="link" href="{% url 'contact' %}">
+      <button class="buttons">contact us</button>
+      </a>
+      <a href="{% url 'login' %}">
+        <button class="buttons" >login/register</button>
+      </a>
+      <a href="{% url 'profile' %}">
+        <button class="buttons" >profile</button>
+      </a>
+      <div class="cartcontainer">
+        <div class="incart">0</div>
+        <a href="{% url 'cart' %}">
+          <button class="buttons"><img class="cart" src="{% static 'image/cart.png' %}"></button>  
+        </a>
+      </div>
+</body>
+</html>

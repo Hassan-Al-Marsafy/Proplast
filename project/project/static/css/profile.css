@@ -1,0 +1,41 @@
+div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #d0efff;
+  }
+  
+  .container {
+  width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:whitesmoke;
+  
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color:#0d9cdf; 
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+  
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;}
+    .pro-pic{
+      width: 250px;
+    }
